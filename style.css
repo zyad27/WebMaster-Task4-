@@ -1,0 +1,140 @@
+/***************** my style end *****************/
+:root{
+    --bgColor : #f4f4f9;
+    --footerBgColor : #343a40;
+    --sideBgColor : #f8f9fa;
+    --whiteColor : white;
+    --primeColor : #007bff;
+    --btnHoverColor: #0056b3;
+    --textMuted : #666;
+    --borderColor : #ddd;
+}
+/***************** my style end *****************/
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bgColor);
+}
+ul li {
+    list-style: none;
+}
+
+header {
+    background-color: var(--primeColor);
+    color: var(--whiteColor);
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background-color: var(--whiteColor);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-links li a {
+    color: var(--whiteColor);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.post {
+    border: 1px solid var(--borderColor);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--whiteColor);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.post p {
+    color: var(--textMuted);
+    line-height: 1.6;
+}
+
+.post .btn-primary {
+    background-color: var(--primeColor);
+    border: none;
+}
+
+.post .btn-primary:hover {
+    background-color: var(--btnHoverColor);
+}
+
+.sidebar {
+    background-color: var(--sideBgColor);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: var(--primeColor);
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: var(--footerBgColor);
+    color: var(--whiteColor);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+#pageUp{
+    color: var(--primeColor);
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 9999;
+    cursor: pointer;
+}
